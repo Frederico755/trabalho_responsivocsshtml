@@ -1,0 +1,116 @@
+:root{
+  --bg: #f6f6f6;
+  --text: #222;
+  --muted: #555;
+  --accent: #1b7f7a;
+  --card-bg: #fff;
+  --gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-header, .card {
+  background: var(--card-bg);
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.site-title { margin: 0; padding: 1.5rem 0 0.25rem; font-size: 1.8rem; }
+.site-sub, .home-text, .intro, .card p, .site-footer {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.main-nav ul { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 1.5rem; flex-wrap: wrap; }
+.main-nav a, .backtop a {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  background: #e3f0ef;
+  border-radius: 6px;
+}
+
+
+.section { min-height: auto; padding: 2rem 0; }
+.section.home { min-height: 60vh; } 
+.section h2 { margin-top: 0; font-size: 1.6rem; }
+
+.home-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.home-row figure { flex: 1 1 250px; margin: 0; padding: 1rem; }
+.home-row img, .hero img { width: 100%; display: block; }
+.home-row figcaption, .hero figcaption { margin-top: 0.5rem; text-align: center; }
+
+
+.mapa {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  align-items: stretch; 
+}
+
+.card {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  gap: 0.5rem;
+  min-height: 220px; 
+}
+
+.card img {
+  width: 100%;
+  height: 160px;          
+  object-fit: cover;      
+  border-radius: 4px;
+  display: block;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-align: center;
+}
+.card p {
+  text-align: center;
+  margin-top: auto;
+}
+
+.site-footer { text-align: center; padding: 1.5rem 0; }
+
+.backtop { margin-top: 1.5rem; }
+.backtop a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .card img { height: 140px; }
+}
